@@ -1,7 +1,8 @@
 ---
 theme: seriph
 title: xAPI au service des Learning Analytics
-background: 
+author: OpenFun
+background:
 info: Journée workshop à la DNE | 02 avril 2024 | © France Université Numérique
 class: text-center
 highlighter: shiki
@@ -9,9 +10,14 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+layout: cover
 ---
 
 # xAPI au service des Learning Analytics
+
+## Wilfried Baradat et Quitterie Lucas (FUN)
+
+2 avril 2024, Lab 110 Paris
 
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/openfun/2024-dne-xapi-la-stack" target="_blank" alt="GitHub" title="Open in GitHub"
@@ -21,14 +27,7 @@ mdc: true
 </div>
 
 ---
-transition: fade-out
----
-
-# FUN
-
-<!-- Slides de présentation par Ollivier -->
-
----
+layout: section
 transition: fade-out
 ---
 
@@ -36,60 +35,76 @@ transition: fade-out
 
 e**X**perience **API**
 
-- Spécification des données d'usage et d'activité dans l'apprentissage en ligne
-- Format universel de données
-- Standard open-source: libre d'accès et utilisation gratuite
-- Interopérabilité
+---
+transition: fade-out
+---
+
+## Caractéristiques
+
+🏫 **Standard**. Spécification des données d'usage et d'activité dans l'apprentissage en ligne <br />
+📖 **Open-source**. Libre d'accès et utilisation gratuite <br />
+🌍 **Universalité**. Format universel de données <br />
+🕸️ **Interopérabilité**. Contrer le traitement des silos de données <br />
 
 ## Chronologie
 
-- 2011: Initiative d'ADL (Advanced Distributed Learning) pour remplacer SCORM, devenu
-  trop limitant en terme d'interopérabilité
-  par un groupe de travail international
-- 2013: Publication de la première version d'xAPI
-- 2023: Publication de xAPI V2 - spécification IEEE (P9274.2.1)
+**2011**. Initiative d'ADL (Advanced Distributed Learning) pour remplacer SCORM, devenu
+  trop limitant en terme d'interopérabilité par un groupe de travail
+  international.  <br />
+**2013**. Publication de la première version d'xAPI  <br />
+**2023**. Publication de xAPI V2 - spécification IEEE (P9274.2.1)  <br />
 
 ---
 transition: fade-out
 ---
 
-# Les concepts xAPI
+## Concepts
 
-- Format de données associant un statement au format JSON à une expérience d'apprentissage
-- Triplet d'information requis: {acteur, verbe, objet}
-- Information complémentaire: {context, résultat, temps}
+🧑‍🎓 Format de données décrivant une expérience d'apprentissage avec un statement
+  écrit en JSON <br />
+🖥️ Formalisation grammaticale d'une action d'apprentissage de type "Sujet,
+Verbe, Complément" <br />
+
+```json
+{
+  "acteur": "La personne concernée par le statement",
+  "verbe": "L'action faite par l'acteur",
+  "objet": "L'objet sur lequel l'acteur a agi",
+  "résultat": "Détails complémentaires sur le résultat de l'action",
+  "contexte": "Information contextuelle complémentaire", 
+  "temps": "Quand l'objet a été soumis à l'action"
+}
+```
 
 ---
-image: ./images/xapi-statement-model-final.png
-
 transition: fade-out
 ---
 
 # Exemple
 
-Situation: Alice est inscrite au cours "Apprendre l'anglais en 1 mois" sur
-https://fun-mooc.fr. Elle regarde une vidéo et décide de mettre sur pause à 45s pour
-pouvoir prendre en note une partie du contenu affiché. Cette action est faite le
-10 janvier 2024, à 20h 51m 37s à Saint Brieuc.
+Alice est inscrite au cours "Apprendre l'anglais en 1 mois" sur
+https://fun-mooc.fr.
+Elle regarde la vidéo de la leçon 2 sur les auxiliaires "have" et "be".
+Elle décide de mettre sur pause à 45s pour pouvoir prendre en note une partie du
+contenu affiché.
+Cette action est faite le 10 janvier 2024, à 20h 51m 37s à Saint-Brieuc.
 
-_Quelle est la modélisation xAPI de l'action d'Alice 
+_Quelle est la modélisation xAPI de l'action d'Alice ?_
 
-- Acteur: Alice
-- Verbe: Mettre sur pause
-- Objet: Vidéo
-- Context: cours "apprendre l'anglais en 1 mois"
-- Résultat: "mise en pause à 45 secondes de la vidéo"
-- Temps: 20h51min37s UTC+2
-
-<!-- Snippets du statement xAPI correspondant -->
+1. Acteur: Alice
+2. Verbe: Mettre sur pause
+3. Objet: Vidéo
+4. Contexte: Cours "Apprendre l'anglais en 1 mois"
+5. Résultat: Mise en pause à 45 secondes de la vidéo
+6. Temps: 20h51min37s UTC+2
 
 ---
 transition: fade-out
 ---
 
-# Acteur
+## Acteur
 
-Alice
+👱🏼‍♀️ Alice <br />
 
 ```json
 {
@@ -107,15 +122,15 @@ Alice
 transition: fade-out
 ---
 
-# Verbe
+## Verbe
 
-Mettre sur pause
+⏸️ Mettre sur pause <br />
 
 ```json
 {
   "verb": {
     "id": "https://w3id.org/xapi/video/verbs/paused",
-      "display":{
+      "display": {
         "fr": "mis sur pause"
       }
   }
@@ -126,9 +141,9 @@ Mettre sur pause
 transition: fade-out
 ---
 
-# Objet
+## Objet
 
-Vidéo de la leçon 2 sur les auxiliaires "have" et "be"
+📼 Vidéo de la leçon 2 sur les auxiliaires "have" et "be"
 
 ```json
 {
@@ -149,11 +164,11 @@ Vidéo de la leçon 2 sur les auxiliaires "have" et "be"
 transition: fade-out
 ---
 
-# Contexte
+## Contexte
 
-- Cours "Apprendre l'anglais en 1 mois"
-- Longueur de la vidéo
-- Taux de complétion de la vidéo
+📗 Cours "Apprendre l'anglais en 1 mois" <br />
+📏 Longueur de la vidéo <br />
+🔣 Taux de complétion de la vidéo <br />
 
 ```json
 {
@@ -182,18 +197,18 @@ transition: fade-out
 transition: fade-out
 ---
 
-# Résultat
+## Résultat
 
-Temps de l'action sur la durée de la vidéo
-- Cumul des segments de la vidéo déjà visionnés
-- Complétion de la vidéo
+⏲️ Temps de l'action sur la durée de la vidéo <br />
+🎞️ Cumul des segments de la vidéo déjà visionnés <br />
+⏳ Pourcentage de la vidéo vu par Alice <br />
 
 ```json
 {
   "result": {
     "extensions": {
       "https://w3id.org/xapi/video/extensions/time": 45.23,
-      "https://w3id.org/xapi/video/extensions/played-segments": "0[.]45.23", 
+      "https://w3id.org/xapi/video/extensions/played-segments": "0[.]45.23",
       "https://w3id.org/xapi/video/extensions/progress": 0.25
     }
   }
@@ -204,43 +219,75 @@ Temps de l'action sur la durée de la vidéo
 transition: fade-out
 ---
 
-# Identification du _statement_
+## Temps
+
+⏱️ 10 janvier 2024, 20h 51min 37s UTC+2 <br />
 
 ```json
 {
-  "timestamp": "2024-01-10T18:51:37.666723+00:00",
-  "id": "d928a86f-cd94-4dbd-uba0-f55dc2017b61", 
+  "timestamp": "2024-01-10T18:51:37.666723+00:00"
 }
 ```
+
 ---
+layout: section
 transition: fade-out
 ---
 
 # Les profils xAPI
 
+---
+transition: fade-out
+---
+
+## Qu'est-ce qu'un profil xAPI ? 
+
+<br>
+
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+
 - Spécification des expériences d'apprentissage pour un type de ressource
   pédagogique
 - Ontologie pour l'écriture des _statements_
-- Profils officiels du standard disponible sur le [serveur de profils xAPI](https://profiles.adlnet.gov/)
+- Bibliothèque des profils officiels du standard disponibles sur le [serveur
+  ADLNET](https://profiles.adlnet.gov/) 👉
 
+</div>
+
+<div>
+<br>
+<br>
+<img style="max-width: 60%; float: right" src="/qr-adlnet-xapi-server.png" />
+</div>
+
+</div>
 ---
 transition: fade-out
 ---
 
-# Exemple de profil 
+## Comment concevoir un profil xAPI ? 
 
-Classe virtuelle
+Exemple du profil "classe virtuelle"
 
 - Co-développement par Sébastien Fraysse et France Université Numérique
-- Approche multi-niveaux: macro, méso, micro
-- Publication sur le serveur
+- Publication officielle sur le serveur ADLNET
 - Rédaction et maintenance d'une documentation utilisateur
+- Travail de conception avec une approche à 3 niveaux
+
+| **MACROSCOPIQUE** | _Quelles sont les activités essentielles à tracer?_ |
+|---|---|
+| **MESOSCOPIQUE** | _Quelles sont les activités qui apportent des informations de suivi pédagogiques à la classe virtuelle?_ |
+| **MICROSCOPIQUE** | _Quelles sont les activités qui apportent un complément d'informations, utiles pour l'enrichissement du suivi pédagogique?_ |
 
 ---
 transition: fade-out
 ---
 
-# Comment utiliser les profils xAPI ? 
+## Comment utiliser les profils xAPI ?
+
+_Les bonnes pratiques_
 
 1. Utiliser les profils publics s'ils répondent aux besoins
 2. Spécifier et publier un profil sur le serveur sinon, en veillant à l'universalité du
@@ -257,7 +304,6 @@ transition: fade-out
 ---
 
 # Le *Learning Record Store* (LRS)
-
 
 ---
 transition: fade-out
@@ -310,7 +356,6 @@ flowchart TD
 </div>
 
 ---
-transition: fade-out
 ---
 
 # Le standard LRS (2)
@@ -336,13 +381,13 @@ Le LRS est généralement *headless*
 
 <br>
 <br>
-<img style="max-width: 60%; float: right" src="/images/public/qr-spec-lrs.png" />
+<img style="max-width: 60%; float: right" src="/qr-spec-lrs.png" />
 
 </div>
 </div>
 
 ---
-transition: fade-out
+layout: end
 ---
 
 # Plusieurs APIs
@@ -591,21 +636,21 @@ transition: fade-out
       Slides
     </a>
     <br/>
-    <img style="max-width: 95%;" src="/images/public/qr-slides.png" />
+    <img style="max-width: 95%;" src="/qr-slides.png" />
   </div>
   <div>
     <logos-github-icon />
     <a href="https://github.com/openfun/ralph">
       openfun/ralph
     </a>
-    <img src="/images/public/qr-repo-ralph.png" />
+    <img src="/qr-repo-ralph.png" />
   </div>
   <div>
     <logos-discord-icon />
     <a href="https://discord.gg/yzaGJ4r6">
       OpenFUN
     </a>
-    <img src="/images/public/openfun-discord-invite.png" alt="OpenFUN Discord invitation"/>
+    <img src="/openfun-discord-invite.png" alt="OpenFUN Discord invitation"/>
   </div>
 </div>
 
