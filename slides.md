@@ -8,22 +8,149 @@ class: text-center
 highlighter: shiki
 drawings:
   persist: false
-transition: slide-left
+transition: fade-out
 mdc: true
 layout: cover
 ---
 
 # xAPI au service des Learning Analytics
 
-## Wilfried Baradat et Quitterie Lucas (FUN)
+## Wilfried Baradat, Ollivier Haemmerlé, Quitterie Lucas et Manuel Raynaud
 
-2 avril 2024, Lab 110 Paris
+France Université Numérique, 2 avril 2024, Lab 110 Paris
 
 <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/openfun/2024-dne-xapi-la-stack" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
+</div>
+
+---
+layout: section
+transition: fade-out
+---
+
+# France Université Numérique
+
+---
+transition: fade-out
+---
+
+## Les missions de FUN
+
+<br>
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+- **Anime et coordonne l’offre de cours** des établissements éditeurs et développe des actions de formation et d’animation des équipes productrices de cours 
+- **Fournit des services éditoriaux et de certification** des cours en ligne  
+- **Met à disposition une infrastructure d’hébergement** sécurisée, des services,
+  des applications et des ressources numériques
+
+</div>
+<div>
+
+- **Assure la promotion** de l’écosystème, des plateformes de diffusion et des cours et formations en ligne, et le développement de la marque FUN
+- **Participe au développement des actions de formation professionnelle** des établissements ​
+- **Contribue à l’expérimentation et l’étude des pratiques pédagogiques**, et au développement des technologies au service de l’apprentissage ​
+
+</div>
+</div>
+
+---
+layout: image
+image: ./fun-chiffre-24.png
+backgroundSize: 65%
+transition: fade-out
+---
+
+## Les chiffres de janvier 2024
+
+---
+layout: image
+image: ./annee-23.png
+backgroundSize: 80%
+transition: fade-out
+---
+
+## L'année 2023
+
+---
+layout: image
+image: ./fun-departement.png
+backgroundSize: 60%
+transition: fade-out
+---
+
+## Les départements
+
+---
+transition: fade-out
+---
+
+## Département technique
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+**Objectifs**
+
+- Développement des outils et de l'infrastructure de l'univers FUN
+- Développements de briques autonomes focalisées sur des périmètres (forum, vidéo, streaming, catalogue, etc.) => agnostique d'un LMS
+- Gestion de l'infrastructure : performance et résilience
+- 100 % des projets open source
+
+</div>
+<div>
+
+**Projets**
+
+- Richie (catalogue)
+- Joanie (ecommerce)
+- Ashley (forum)
+- Marsha (LCMS)
+- Cunningham (Design System)
+- Verna (Form builder)
+- Kubic (k8s as code)
+
+<br>
+
+- Moodle
+- Open edX
+
+</div>
+</div>
+
+---
+transition: fade-out
+---
+
+## Département data
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+**Objectifs**
+
+- Organiser la collecte, la transformation et le stockage des **traces d'apprentissage** générées par les apprenants sur tous nos **services** / toutes nos **plateformes**
+- Valoriser les traces :
+    - Dashboards équipes pédagogiques
+    - Dashboards apprenant
+- Assister les travaux de recherche liés aux traces
+
+</div>
+<div>
+
+**Services**
+
+- OpenEdx
+- Moodle
+- Marsha (vidéos, documents)
+- Ashley (forum)
+
+</div>
 </div>
 
 ---
