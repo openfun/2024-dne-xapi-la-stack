@@ -356,14 +356,12 @@ flowchart TD
 </div>
 
 ---
+transition: fade-out
 ---
 
 # Le standard LRS (2)
 
 Le LRS est "un serveur (i.e. un système capable de recevoir et de traiter des requêtes web) qui est responsable de la réception, du stockage et de l'accès aux Learning Records." 
-
-<div class="grid grid-cols-2 gap-4">
-<div>
 
 Ce standard  définit :
 - l'authentification et les permissions
@@ -375,19 +373,8 @@ Ce standard  définit :
 
 Le LRS est généralement *headless*
 
-</div>
-
-<div>
-
-<br>
-<br>
-<img style="max-width: 60%; float: right" src="/qr-spec-lrs.png" />
-
-</div>
-</div>
-
 ---
-layout: end
+transition: fade-out
 ---
 
 # Plusieurs APIs
