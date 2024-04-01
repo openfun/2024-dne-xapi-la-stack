@@ -37,7 +37,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-## Les missions de FUN
+# Les missions de FUN
 
 <br>
 
@@ -66,7 +66,7 @@ backgroundSize: 65%
 transition: fade-out
 ---
 
-## Les chiffres de janvier 2024
+# Les chiffres de janvier 2024
 
 ---
 layout: image
@@ -75,7 +75,7 @@ backgroundSize: 80%
 transition: fade-out
 ---
 
-## L'année 2023
+# L'année 2023
 
 ---
 layout: image
@@ -84,13 +84,13 @@ backgroundSize: 60%
 transition: fade-out
 ---
 
-## Les départements
+# Les départements
 
 ---
 transition: fade-out
 ---
 
-## Département technique
+# Département technique
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -127,7 +127,7 @@ transition: fade-out
 transition: fade-out
 ---
 
-## Département data
+# Département data
 
 <div class="grid grid-cols-2 gap-4">
 <div>
