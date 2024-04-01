@@ -93,7 +93,7 @@ _Quelle est la modélisation xAPI de l'action d'Alice ?_
 
 1. Acteur: Alice
 2. Verbe: Mettre sur pause
-3. Objet: Vidéo
+3. Objet: Vidéo sur les auxiliaires "have" et "be"
 4. Contexte: Cours "Apprendre l'anglais en 1 mois"
 5. Résultat: Mise en pause à 45 secondes de la vidéo
 6. Temps: 20h51min37s UTC+2
@@ -248,18 +248,23 @@ transition: fade-out
 
 <div>
 
-- Spécification des expériences d'apprentissage pour un type de ressource
-  pédagogique
-- Ontologie pour l'écriture des _statements_
-- Bibliothèque des profils officiels du standard disponibles sur le [serveur
-  ADLNET](https://profiles.adlnet.gov/) 👉
+**Ontologie** pour les _learning analytics_ regroupant un ensemble de spécification
+pour décrire les interactions avec une ressource d'apprentissage.
+
+- Modèles de _statements_ décrivant une expérience d'apprentissage
+- Propriétés et règles associées défini pour les modèles de _statements_
+- Vocabulaire utilisé dans les modèles de _statements_ <br />
+
+[Aperçu du profil associé à la ressource vidéo](https://profiles.adlnet.gov/profile/fc6b904c-e8d0-4a84-987f-a0f5313cec6f)
 
 </div>
 
 <div>
+Bibliothèque des profils officiels du standard disponibles sur le 
+serveur ADLNET 👇
 <br>
 <br>
-<img style="max-width: 60%; float: right" src="/qr-adlnet-xapi-server.png" />
+<img style="max-width: 60%; float: left" src="/qr-adlnet-xapi-server.png" />
 </div>
 
 </div>
@@ -272,9 +277,11 @@ transition: fade-out
 Exemple du profil "classe virtuelle"
 
 - Co-développement par Sébastien Fraysse et France Université Numérique
-- Publication officielle sur le serveur ADLNET
 - Rédaction et maintenance d'une documentation utilisateur
-- Travail de conception avec une approche à 3 niveaux
+- Travail de conception avec une approche à 3 niveaux pour définir les modèles
+  de _statements_
+
+_On associe à une expérience d'apprentissage un modèle de_ statements _mais comment savoir quelles expériences représenter dans le profil ?_
 
 | **MACROSCOPIQUE** | _Quelles sont les activités essentielles à tracer?_ |
 |---|---|
@@ -608,7 +615,7 @@ Released en 01/2024 🎉
 - Utilisation de Pydantic v2 pour les modèles
 
 ---
-layout: full
+layout: end
 transition: fade-out
 ---
 
